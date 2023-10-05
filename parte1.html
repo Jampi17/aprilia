@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .Aprilia_modelos {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .content_fila1_Aprilia_modelos {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .fila1_Aprilia_modelos {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        .Aprilia_modelos_content {
+            height: 100%;
+            width: 100%;
+            width: calc(33.33% - 20px);
+            box-sizing: border-box;
+            flex-direction: column;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .enca_Aprilia_modelos_content {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+
+        .enca_Aprilia_modelos_content span {
+            color: #FFFFFF;
+            font-family: "Rajdhani", Sans-serif;
+            font-size: 1em;
+            background-color: #FF0000;
+            padding: 0.3em;
+        }
+
+
+
+        .Aprilia_modelos_content img {
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .Aprilia_modelos_content:hover img {
+            transform: translateY(-1em);
+        }
+
+        @keyframes hoverAnimation {
+            0% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-5px);
+            }
+
+            100% {
+                transform: translateY(0);
+            }
+        }
+
+        .Aprilia_modelos_content:hover img {
+            animation: hoverAnimation 0.9s ease-in-out infinite;
+        }
+
+        @media (max-width: 950px) {
+            .fila1_Aprilia_modelos {
+                width: 100%;
+                height: 285px;
+            }
+
+            .Aprilia_modelos_content {
+                width: calc(50% - 20px);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .Aprilia_modelos_content {
+                width: 100%;
+                flex-direction: column;
+                /* Agregar esta línea */
+                align-items: center;
+                /* Alinear al centro en la columna */
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section class="Aprilia_modelos">
+        <div class="content_fila1_Aprilia_modelos">
+            <div class="fila1_Aprilia_modelos">
+                <div class="Aprilia_modelos_content">
+                    <div>
+                        <img src="imagenes/M1/M1.png" style="width: 100%; height: 100%;">
+                    </div>
+                    <div class="enca_Aprilia_modelos_content">
+                        <span>Aprilia SR MOTARD 160 ABS</span>
+                    </div>
+                </div>
+                <div class="Aprilia_modelos_content">
+                    <div>
+                        <img src="imagenes/M2/M2.png" style="width: 100%; height: 100%;">
+                    </div>
+                    <div class="enca_Aprilia_modelos_content">
+                        <span>Aprilia SR MOTARD 160 ABS</span>
+                    </div>
+                </div>
+                <div class="Aprilia_modelos_content">
+                    <div>
+                        <img src="imagenes/M3/M3.png" style="width: 100%; height: 100%;">
+                    </div>
+                    <div class="enca_Aprilia_modelos_content">
+                        <span>Aprilia SR MOTARD 160 ABS</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
+
+</html>

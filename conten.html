@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content_descripcion_espec="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Cambio de Contenido</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        /* Estilos del contenedor principal */
+        .container_descripcion_espec {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Estilos de los botones */
+        .buttons_descripcion_espec {
+            margin-bottom: 20px;
+        }
+
+        .buttons_descripcion_espec button {
+            padding: 10px 20px;
+            margin: 0 10px;
+            border: none;
+            cursor: pointer;
+            background-color: #fff;
+            color: #000;
+            border-radius: 5px;
+        }
+
+        /* Estilo para el botón activo */
+        .buttons_descripcion_espec button.active {
+            color: red;
+        }
+
+        /* Estilos del div de contenido */
+        .content_descripcion_espec {
+            display: none;
+            margin-top: 20px;
+        }
+
+        .content_descripcion_espec.active {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        /* Estilos de los contenedores de imagen */
+        .image-container_descripcion_espec {
+            width: 300px;
+            /* Tamaño fijo para todos los contenedores de imagen */
+            height: auto;
+        }
+
+        /* Estilos de la imagen */
+        .image-container_descripcion_espec img {
+            width: 100%;
+            height: auto;
+        }
+
+        /* Estilos del título y la descripción */
+        .content_descripcion_espec h2 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .content_descripcion_espec p {
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <section class="container_descripcion_espec">
+        <div class="buttons_descripcion_espec">
+            <div class="buttons_descripcion_espec">
+                <button onclick="showContent(1)" id="button1" class="active"><span style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Máximo Confort</span></button>
+                <button onclick="showContent(2)" id="button2"><span style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Tecnología Premium</span></button>
+                <button onclick="showContent(3)" id="button3"><span style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">Carácter Urbano</span></button>
+            </div>
+        </div>
+        <div class="content_descripcion_espec active" id="content1" style="width: 70%;">
+            <div class="image-container_descripcion_espec">
+                <img src="imagenes/M1/tabs_sella.jpg.webp" alt="Imagen 1">
+            </div>
+            <div style="width: 55%; text-align: initial;">
+                <h2 style="font-family: Rajdhani">Ergonomía y capacidad: para una conducción cómoda y práctica</h2>
+                <p style="text-align: justify;">Cada elemento del Aprilia SXR 160 está diseñado para mejorar la
+                    comodidad del conductor y el
+                    pasajero. Como el espacioso asiento de 850 mm, el manillar elevado para una mejor posición de
+                    conducción, el reposapiés plano con más espacio para las piernas del motorista y el amortiguador
+                    trasero ajustable que hace que la Aprilia SXR 160 sea suave en todo tipo de carreteras.</p>
+            </div>
+        </div>
+        <div class="content_descripcion_espec" id="content2" style="width: 70%;">
+            <div class="image-container_descripcion_espec">
+                <img src="imagenes/M1/tabs_strumentazione.jpg.webp" alt="Imagen 2">
+            </div>
+            <div style="width: 55%; text-align: initial;">
+                <h2>Cada detalle siempre bajo control</h2>
+                <p style="text-align: justify;">Gracias al cuadro LCD, tienes acceso a información importante antes,
+                    durante y después del viaje:
+                    duración del viaje, temperatura ambiente, presión de los neumáticos y mucho más. El sistema de
+                    iluminación es Full LED y hace que el SXR 160 sea siempre el protagonista en el tráfico de la
+                    ciudad, especialmente durante la noche.</p>
+            </div>
+        </div>
+        <div class="content_descripcion_espec" id="content3" style="width: 70%;">
+            <div class="image-container_descripcion_espec">
+                <img src="imagenes/M1/tabs_dettaglio.jpg.webp" alt="Imagen 3">
+            </div>
+            <div style="width: 55%; text-align: initial;">
+                <h2>El toque inimitable de Aprilia en movilidad urbana</h2>
+                <p style="text-align: justify;">Con el SXR 160 puedes experimentar los viajes urbanos cotidianos de una
+                    manera funcional, sin
+                    sacrificar el estilo. Faros y luces traseras dobles para un aspecto aún más moderno. Las dimensiones
+                    son mayores que las de los scooters clásicos, pero las formas dinámicas y el escudo frontal también
+                    confirman el carácter inimitable de Aprilia en este modelo.</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+         function showContent(contentId) {
+            // Ocultar todos los contenidos
+            var contents = document.querySelectorAll(".content_descripcion_espec");
+            contents.forEach(function (content) {
+                content.classList.remove("active");
+            });
+
+            // Mostrar el contenido seleccionado
+            var selectedContent = document.getElementById("content" + contentId);
+            selectedContent.classList.add("active");
+
+            // Cambiar el color de todos los botones a negro
+            var buttons = document.querySelectorAll(".buttons_descripcion_espec button");
+            buttons.forEach(function (button) {
+                button.classList.remove("active");
+            });
+
+            // Cambiar el color del texto del botón activo a rojo
+            var selectedButton = document.getElementById("button" + contentId);
+            selectedButton.classList.add("active");
+        }
+    </script>
+
+</body>
+
+</html>
