@@ -1,0 +1,22 @@
+
+.c-section-1{
+    background-color: #000000;
+    background-image: url(https://aprilia-colombia.com/wp-content/uploads/2021/01/image.jpg);
+    background-position: -293px 283px;
+}
+.c-lett-desc{
+    font-size: 17px;
+}
+.c-tamanio-desc{
+    height: 338px;
+}
+
+.c-scramb-section-1{
+    background-color: #000000;    
+  background-image: linear-gradient(#000, rgba(0, 0, 0, 0.5)), url(https://aprilia-colombia.com/wp-content/uploads/2021/01/image.jpg);
+    background-position: center left;
+}
+#portfolio form{
+    color: #7A7A7A;
+    text-align: justify;
+}

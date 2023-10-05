@@ -1,0 +1,2303 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&family=Roboto+Condensed:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap');
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+body {
+    font-family: "Roboto Condensed", Sans-serif;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.header_nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: red;
+    padding: 0px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+}
+
+.logo_nav {
+    font-size: 25px;
+    text-transform: uppercase;
+    color: white;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.logo_nav img {
+    height: 60px;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+}
+
+.navigation_nav ul {
+    list-style: none;
+}
+
+#grupo-piaggio a.active::before,
+#grupo-piaggio a.active::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: white;
+}
+
+#grupo-piaggio a:focus,
+#grupo-piaggio a:hover {
+    position: relative;
+}
+
+.menu-item>a:focus::before,
+.menu-item>a:hover::before {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: white;
+}
+
+#modelos ul {
+    border: none;
+    /* Elimina la línea */
+}
+
+#modelos ul li a {
+    background-color: red;
+    /* Cambia el fondo a azul */
+}
+
+.header_nav .navigation_nav ul li {
+    float: left;
+    position: relative;
+}
+
+.header_nav .navigation_nav ul li a {
+    font-size: 15px;
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    display: block;
+    transition: all .2s ease;
+}
+
+.header_nav .navigation_nav ul li a:hover {
+    background-color: red;
+}
+
+.header_nav .navigation_nav ul li ul li a:hover {
+    background-color: black;
+}
+
+.header_nav .navigation_nav:hover {
+    background-color: red;
+}
+
+.header_nav .navigation_nav ul li ul {
+    position: absolute;
+    right: 0;
+    width: 135%;
+    background-color: red;
+    display: none;
+    left: 1px;
+}
+
+.header_nav .navigation_nav ul li ul li a {
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.header_nav .navigation_nav ul li ul li ul {
+    position: absolute;
+    top: 0;
+    right: 300px;
+}
+
+.header_nav .navigation_nav ul li ul li {
+    width: 100%;
+}
+
+.header_nav .navigation_nav ul li:hover>ul {
+    display: initial;
+}
+
+#togle_nav,
+.header_nav label {
+    display: none;
+    cursor: pointer;
+}
+
+.menu {
+    width: 45px;
+    height: 35;
+}
+
+@media(max-width:950px) {
+    .header_nav label {
+        display: initial;
+    }
+
+    .header_nav {
+        padding: 20px 10%;
+    }
+
+    .header_nav .navigation_nav {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: black;
+        display: none;
+    }
+
+    .header_nav .navigation_nav ul li {
+        width: 100%;
+    }
+
+    .header_nav .navigation_nav ul li a {
+        padding: 8px 30px 8px 10%;
+    }
+
+    .header_nav .navigation_nav ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    .header_nav .navigation_nav ul li ul li {
+        background-color: black;
+    }
+
+    .header_nav .navigation_nav ul li ul li ul {
+        position: relative;
+        width: 100%;
+        left: 0;
+    }
+
+    #togle_nav:checked~.navigation_nav {
+        display: block;
+    }
+}
+
+/*BANNER*/
+.main {
+    background-color: aquamarine;
+}
+
+.banner {
+    background-image: url(imagenes/Aprillia-3.png);
+    background-repeat: no-repeat;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado_uno {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado_1 {
+    color: #8B8B8B;
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.encabezado_dos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado_2 {
+    color: #FFF;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 65px;
+    text-align: center;
+}
+
+.content_banner {
+    color: azure;
+}
+
+.content_banner1 {
+    width: 80%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media (max-width: 768px) {
+    .banner {
+        background-image: url(imagenes/Aprillia2.png);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    .encabezado_uno {
+        text-align: center;
+    }
+
+    .encabezado_2 {
+        font-size: 40px;
+        /* Reducir el tamaño del texto para dispositivos móviles */
+    }
+
+    .content_banner1 {
+        width: 90%;
+        /* Usar el ancho completo en dispositivos móviles */
+    }
+
+    .infoo_ocul {
+        display: none;
+    }
+}
+
+/*descripcion home*/
+.descripcion_aprila {
+    width: 100%;
+}
+
+.content_descripcion_aprila {
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.content_descripcion_aprila_parte1 {
+    width: 80%;
+}
+
+.content_descripcion_aprila_parte1 h1 {
+    color: #191A1B;
+    font-family: "Rajdhani", Sans-serif;
+    font-weight: 700;
+}
+
+.content_descripcion_aprila_parte2 {
+    width: 80%;
+    padding: 20px 0;
+}
+
+.content_descripcion_aprila_parte2 p {
+    color: #8B8B8B;
+    font-family: Sans-serif;
+    margin-bottom: 1.5em;
+}
+
+.linea_roja {
+    background-color: #FF0000;
+    height: 2px;
+    width: 80%;
+    margin: 20px auto;
+}
+
+.content_descripcion_aprila_parte3 {
+    width: 80%;
+}
+
+.content_descripcion_aprila_parte3 h2 {
+    color: #000000;
+    font-size: 22px;
+    line-height: 1.5;
+    text-transform: uppercase;
+    letter-spacing: -1.5px;
+}
+
+.content_descripcion_aprila_parte3 span {
+    color: #000000;
+    font-family: "Rajdhani";
+    font-size: 20px;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: -1.5px;
+}
+
+/*section 3div*/
+.Aprilia_Máxima_deportividad {
+    background-image: url(imagenes/Tuono660_Editorial_Cover_1920x640.webp);
+    background-position: center center;
+    /* Ajusta la imagen al 100% del contenedor */
+    background-repeat: no-repeat;
+    /* Evita la repetición de la imagen */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+}
+
+.contenedor_Aprilia_Máxima_deportividad {
+    display: flex;
+    width: 80%;
+    justify-content: center;
+}
+
+.Aprilia_Máxima_deportividad2 {
+    background-image: url(imagenes/Editorial_cover_1920x640_desktop.jpg);
+    background-position: center center;
+    /* Ajusta la imagen al 100% del contenedor */
+    background-repeat: no-repeat;
+    /* Evita la repetición de la imagen */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+}
+
+.Aprilia_Máxima_deportividad3 {
+    background-image: url(imagenes/MicrosoftTeams-image53.webp);
+    background-position: center center;
+    /* Ajusta la imagen al 100% del contenedor */
+    background-repeat: no-repeat;
+    /* Evita la repetición de la imagen */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+}
+
+.interno3_descripcion_modelo1_parte1 {
+    height: 500px;
+    width: 50%;
+}
+
+.elementor-text-editor {
+    width: 50%;
+    background-color: #f0f0f0;
+    padding: 20px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/*lines y espacio*/
+.espacio_modelos {
+    height: 187px;
+    background-color: white;
+}
+
+/*todos los modelos*/
+.Aprilia_modelos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.content_fila1_Aprilia_modelos {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.fila1_Aprilia_modelos {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.Aprilia_modelos_content {
+    height: 100%;
+    width: 100%;
+    width: calc(33.33% - 20px);
+    box-sizing: border-box;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.enca_Aprilia_modelos_content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.enca_Aprilia_modelos_content span {
+    color: #FFFFFF;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 1em;
+    background-color: #FF0000;
+    padding: 0.3em;
+}
+
+
+
+.Aprilia_modelos_content img {
+    transition: transform 0.2s ease-in-out;
+}
+
+.Aprilia_modelos_content:hover img {
+    transform: translateY(-1em);
+}
+
+@keyframes hoverAnimation {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.Aprilia_modelos_content:hover img {
+    animation: hoverAnimation 0.9s ease-in-out infinite;
+}
+
+@media (max-width: 950px) {
+    .fila1_Aprilia_modelos {
+        width: 100%;
+        height: 285px;
+    }
+
+    .Aprilia_modelos_content {
+        width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 600px) {
+    .Aprilia_modelos_content {
+        width: 100%;
+        flex-direction: column;
+        /* Agregar esta línea */
+        align-items: center;
+        /* Alinear al centro en la columna */
+    }
+}
+
+/* Cambios para vista móvil */
+@media (max-width: 768px) {
+    .fila1_Aprilia_modelos {
+        width: 100%;
+    }
+
+    .Aprilia_modelos_content {
+        width: 100%;
+        margin-bottom: 20px;
+        /* Agrega un margen inferior entre elementos */
+    }
+
+    .enca_Aprilia_modelos_content {
+        position: static;
+        /* Restaura la posición estática */
+        margin-top: 10px;
+        /* Agrega un margen superior para separar el texto */
+        text-align: center;
+        /* Centra el texto en la vista móvil */
+    }
+
+    .enca_Aprilia_modelos_content span {
+        padding: 0.2em;
+        /* Reduce el espacio alrededor del texto */
+        font-size: 0.9em;
+        /* Reduce el tamaño del texto */
+    }
+}
+
+
+/*fotter*/
+.footer_piaggio {
+    height: 435px;
+    background-color: #000;
+    /*background-image: url(imagenes/fonfo_footer.jpg);*/
+    background-position: center center;
+    background-repeat: repeat-x;
+    background-size: 58% auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footer_column {
+    width: 30%;
+    height: 435px;
+}
+
+.titulo_footer {
+    height: 25%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 18px;
+    font-weight: 900;
+    text-transform: capitalize;
+}
+
+.logo_footer {
+    height: 25%;
+    display: flex;
+    align-items: center;
+}
+
+.logo_footer img {
+    max-height: 75px;
+    margin-top: 25px;
+}
+
+.descripcion_footer {
+    height: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.descripcion_footer span {
+    color: #FFFFFFC9;
+    font-family: "Roboto Condensed", Sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6em;
+}
+
+.lista_canales span {
+    color: #FFFFFFC9;
+}
+
+.redes_footer {
+    height: 25%;
+    display: flex;
+    align-items: center;
+    gap: 1%;
+}
+
+.footer_info {
+    height: 56px;
+    display: flex;
+    width: 100%;
+    background-color: #000;
+}
+
+.footer_info_img {
+    width: 30%;
+    display: flex;
+    align-items: center;
+}
+
+.footer_info2 {
+    width: 55%;
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.footer_info3 {
+    width: 15%;
+    display: flex;
+    align-items: center;
+    color: #FFF;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.footer_piaggio a {
+    text-decoration: none;
+    color: #FFFFFFC9;
+}
+
+.footer_piaggio a:hover {
+    text-decoration: none;
+    color: red;
+}
+
+/* Estilos generales para dispositivos móviles */
+@media (max-width: 767px) {
+    .footer_piaggio {
+        flex-direction: column;
+        align-items: center;
+        height: 550px;
+    }
+
+    .footer_column {
+        width: 80%;
+        text-align: center;
+        height: auto;
+    }
+
+    .descripcion_footer {
+        height: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .footer_info {
+        height: 150px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .logo_footer {
+        justify-content: center;
+        margin: 10px;
+    }
+
+    .logo_footer img {
+        max-height: 50px;
+    }
+
+    .descripcion_footer span {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .redes_footer {
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .lista_canales span {
+        display: block;
+        text-align: initial;
+    }
+
+    .footer_info_img img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .footer_info2,
+    .footer_info3 {
+        text-align: center;
+    }
+
+    .espacios_mobil2 {
+        display: none;
+    }
+
+    .footer_info_img,
+    .footer_info2,
+    .footer_info3 {
+        width: auto;
+    }
+}
+
+/*pagina de distribuidor*/
+/*distrbuidor*/
+.banner_distribuidor {
+    height: 300px;
+    background-image: url(imagenes/image.jpg);
+    background-position: center left;
+    background-color: #000000;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado_distribuidor_uno {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado_distribuidor_1 {
+    color: #8B8B8B;
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.encabezado_distribuidor_dos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.encabezado_distribuidor_2 {
+    color: #FFF;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 65px;
+    text-align: center;
+}
+
+/*mapa*/
+.conten_mapa {
+    height: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.buscador_mapa {
+    height: 800px;
+}
+
+.conten_mapa {
+    background-color: white;
+}
+
+#location-input {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+#map {
+    width: 60%;
+    height: 800px;
+}
+
+/*pagina de postventa*/
+/*posventa*/
+.postventa {
+    height: auto;
+    background-color: white;
+    padding: 20px;
+}
+
+.conten_postventa {
+    display: flex;
+    justify-content: center;
+}
+
+.posventa_enca {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.enca_post {
+    width: 80%;
+    text-align: center;
+}
+
+.post_elementos {
+    display: flex;
+    justify-content: space-evenly;
+    width: 92%;
+}
+
+.post_elemento1 {
+    width: 30%;
+    border: solid 1px black;
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.post_elemento_logo {
+    background-color: #FFF;
+}
+
+.post_elemento_lista ul {
+    list-style: none;
+}
+
+.pasventa_imagen img {
+    height: 300px;
+}
+
+/*pagina de modelo*/
+/*modelos*/
+
+.modelo_encabezado {
+    background-image: url(imagenes/banner-producto.png);
+    height: 300px;
+    display: flex;
+    align-items: center;
+}
+
+.cabecera_modelo {
+    position: relative;
+    left: 180px;
+}
+
+.modelo_encabezado h5 {
+    color: #8B8B8B;
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.modelo_encabezado h1 {
+    color: #FFF;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 65px;
+    font-weight: 900;
+}
+
+.modelo_encabezado h2 {
+    color: #FFF;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+}
+
+.modelo_iamagenes {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+}
+
+.modelo_iamagenes img {
+    max-height: 600px;
+    position: relative;
+    top: -50px;
+}
+
+/*conten formulario*/
+.modelo_formulario {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+}
+
+.modelo_formulario_contenedor {
+    width: 80%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.contennn_for {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.formulario_conten1 {
+    width: 50%;
+}
+
+.formulario_conten_parte1 {
+    text-align: center;
+    color: white;
+}
+
+.formulario_conten_parte1 h1 {
+    text-align: center;
+    color: red;
+}
+
+.formulario_conten_parte1 {
+    padding: 10px;
+}
+
+.formulario_conten2 {
+    width: 50%;
+    color: white;
+    padding-top: 29px;
+}
+.formulario_conten_parte2{
+    width: 75%;
+}
+.formulario_conten_parte2 h1 {
+    font-size: 30px;
+    color: white;
+}
+
+
+/*formulario*/
+.container_form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.modelo_formulario form {
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.modelo_formulario option {
+    text-transform: uppercase;
+}
+
+.modelo_formulario input {
+    font-family: "Roboto Condensed", Sans-serif;
+    color: #000;
+}
+
+
+.modelo_formulario input[type="text"],
+input[type="email"],
+input[type="tel"],
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modelo_formulario label {
+    text-align: center;
+    display: block;
+}
+
+.modelo_formulario .checkbox-container {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.modelo_formulario input[type="checkbox"] {
+    margin: 5px;
+}
+
+.modelo_formulario input[type="submit"] {
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.modelo_formulario input[type="submit"]:hover {
+    background-color: red;
+}
+
+.formulario_conten2 {
+    width: 50%;
+}
+
+/*descripcion de modelo*/
+.descripcion_modelo1_parte1 {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+/*infor parte 1*/
+.contenedor1_modelo1 {
+    width: 80%;
+    display: flex;
+}
+
+.imagen_contenedor1_modelo1 {
+    height: 200px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.info_contenedor1_modelo1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-left: 50px;
+    background-color: white;
+}
+
+.info_contenedor1_modelo1 h5 {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #000;
+    top: 10px;
+    position: relative;
+    font-weight: 600;
+    font-family: 'ROBOTO';
+}
+
+.info_contenedor1_modelo1 h1 {
+    color: #0371AD;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 54px;
+}
+
+.contenedor_info_contenedor1_modelo1 {
+    color: #303030;
+    font-family: "Roboto Condensed", Sans-serif;
+    font-weight: 400;
+    line-height: 1.4em;
+    padding-top: 15px;
+    width: 80%;
+}
+
+/*infor parte 2*/
+.contenedor2_modelo1 {
+    width: 80%;
+    display: flex;
+}
+
+.imagen_contenedor2_modelo1 {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.info_contenedor2_modelo1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-left: 50px;
+    background-color: #fff;
+}
+
+.info_contenedor2_modelo1 h5 {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: white;
+    top: 10px;
+    position: relative;
+    font-weight: 600;
+    font-family: 'ROBOTO';
+}
+
+.info_contenedor2_modelo1 h1 {
+    color: white;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 54px;
+}
+
+.contenedor_info_contenedor2_modelo1 {
+    color: white;
+    font-family: "Roboto Condensed", Sans-serif;
+    font-weight: 400;
+    line-height: 1.4em;
+    padding-top: 15px;
+    width: 80%;
+}
+
+/*infor parte 3*/
+.contenedor3_modelo1 {
+    width: 80%;
+    display: flex;
+}
+
+.imagen_contenedor3_modelo1 {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.info_contenedor3_modelo1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-left: 50px;
+    background-color: #0371AD;
+}
+
+.info_contenedor3_modelo1 h5 {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: white;
+    top: 10px;
+    position: relative;
+    font-weight: 600;
+    font-family: 'ROBOTO';
+}
+
+.info_contenedor3_modelo1 h1 {
+    color: white;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 54px;
+}
+
+.contenedor_info_contenedor3_modelo1 {
+    color: white;
+    font-family: "Roboto Condensed", Sans-serif;
+    font-weight: 400;
+    line-height: 1.4em;
+    padding-top: 15px;
+    width: 80%;
+}
+
+/*boton modelos*/
+
+.boton2_modelos {
+    display: flex;
+    justify-content: center;
+}
+
+.boton_modelos_2 {
+    width: 300px;
+    height: 50px;
+    padding: 2px 0;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    background-color: red;
+    color: #fafafa;
+    transition: .4s;
+}
+
+.boton_modelos_2:hover {
+    background-color: red;
+    color: #fafafa;
+    transform: skew(-20deg);
+}
+
+/**/
+.contenedor_especificaciones {
+    background-color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.contenedor_especificaciones img {
+    height: 80px;
+}
+
+.especificaciones_colum1 .info {
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #000;
+    bottom: 0px;
+    position: relative;
+    font-weight: 600;
+    font-family: 'ROBOTO';
+}
+
+/*especificacione*/
+.conten_colum {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    /* Espaciado entre las columnas */
+}
+
+.especificaciones_colum1 {
+    width: 48%;
+}
+
+.column-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    text-align: center;
+}
+
+.imagen_colum {
+    border-top: 2px solid #000;
+    border-bottom: 2px solid #000;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.column_descripcion {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+    border-bottom: 1px solid #ccc;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.column_descripcion h2 {
+    color: #0371AD;
+    text-align: left;
+}
+
+.column_descripcion span {
+    text-align: left;
+}
+
+.info {
+    font-size: 12px;
+    letter-spacing: 0px;
+    color: #000;
+    bottom: 0px;
+    position: relative;
+    font-weight: 600;
+    font-family: 'ROBOTO';
+}
+
+.informacion_espec_final {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+}
+
+.informacion_espec_final_texto {
+    margin: 90px 0 90px 0;
+    text-align: center;
+    font-family: "Roboto", Sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/*pagina de todos los modelos*/
+.todos_los_modelos {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+.contenedor_todos_los_modelos {
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conten_todos_los_modelos {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+}
+
+.imagen_todos_los_modelos {
+    background-color: #0056b3;
+    width: 100%;
+}
+
+.info_todos_los_modelos {
+    background-color: #FFF;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    padding-left: 25px;
+}
+
+.info_todos_los_modelos h2 {
+    color: #0371AD;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 50px;
+    font-weight: 800;
+    line-height: .9em;
+}
+
+.boton_modelos_3 {
+    width: 180px;
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: none;
+    border: 4px solid #0371AD;
+    background-color: #0371AD;
+    color: #fafafa;
+    transition: .4s;
+}
+
+.imagen_todos_los_modelos2 {
+    background-color: #333;
+    width: 100%;
+}
+
+.modelo_encabezado_mo {
+    background-image: url(imagenes/banner-producto.png);
+    height: 500px;
+    display: flex;
+    align-items: center;
+}
+
+.cabecera_modelo_mo {
+    position: relative;
+    left: 130px;
+}
+
+.modelo_encabezado_mo h5 {
+    color: #8B8B8B;
+    font-size: 15px;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.modelo_encabezado_mo h1 {
+    color: #FFF;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 65px;
+    font-weight: 900;
+}
+
+.modelo_encabezado_mo h2 {
+    color: #FFF;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -1.5px;
+}
+
+/*video de modelo*/
+.video_piaggio_one {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    padding-bottom: 56.25%;
+    /* Proporción 16:9 para video responsivo */
+}
+
+.contenedor_video_piaggio_one {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video-container_video_piaggio_one {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.video-container_video_piaggio_one iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+.datos_mas {
+    background-color: #FFF;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mas_parte1 {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.mas_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.espacio_modelos1 {
+    height: 100px;
+    background-color: white;
+}
+
+
+/*modelo Aprilia SR MOTARD*/
+.APRILIA_SR_MOTARD_banner {
+    background-image: url(imagenes/background-internas-Aprilia.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.APRILIA_SR_MOTARD_parte1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+
+.APRILIA_SR_MOTARD_encabezado h1 {
+    color: #FF0000;
+    font-family: "Rajdhani", Sans-serif;
+    font-size: 54px;
+    font-weight: 900;
+}
+
+.APRILIA_SR_MOTARD_encabezado span {
+    font-size: 12px;
+    letter-spacing: 4px;
+    color: #000000;
+    top: 10px;
+    position: relative;
+    font-weight: 600;
+    font-family: 'ROBOTO';
+}
+
+.APRILIA_SR_MOTARD_imagen {
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    width: 66.8%;
+}
+
+.APRILIA_SR_MOTARD_imagen img {
+    max-width: 75%;
+    height: auto;
+}
+
+.APRILIA_SR_MOTARD_encabezado {
+    width: 33.2%;
+}
+
+@media screen and (max-width: 768px) {
+    .APRILIA_SR_MOTARD_banner {
+        height: 600px;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .APRILIA_SR_MOTARD_parte1 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .APRILIA_SR_MOTARD_imagen {
+        width: 100%;
+    }
+
+    .APRILIA_SR_MOTARD_encabezado {
+        width: 100%;
+    }
+
+    .APRILIA_SR_MOTARD_encabezado h1 {
+        font-size: 36px;
+    }
+
+    .APRILIA_SR_MOTARD_encabezado span {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+}
+
+/*estilos de carrusel*/
+.container {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+}
+
+.slider-container {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-container img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.prev-button,
+.next-button {
+    width: 40px;
+    height: 60px;
+    font-size: 80px;
+    font-weight: bold;
+    color: grey;
+    /*background-color: green;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    transition: color 0.3s ease;
+}
+
+.prev-button {
+    left: 0px;
+}
+
+.next-button {
+    right: 0px;
+}
+
+.prev-button:hover,
+.next-button:hover {
+    color: black;
+}
+
+.lines {
+    position: absolute;
+    display: flex;
+    bottom: 10px;
+}
+
+.line {
+    padding: 5px 5px;
+    border-radius: 50px;
+    margin: 0 3px;
+    background-color: rgba(240, 240, 255, 0.7);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.line.active {
+    background-color: red;
+    /* Cambiar el color a rojo para la diapositiva seleccionada */
+}
+
+.active,
+.line:hover {
+    background-color: red;
+}
+
+.slider {
+    display: none;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 700px) {
+    .slider-container {
+        max-width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        /* Para evitar que las imágenes se salgan del carrusel */
+    }
+
+    .slider-container img {
+        width: 100%;
+        /* Hacer que las imágenes se ajusten al ancho del carrusel */
+        height: auto;
+        /* Mantener la proporción de aspecto de las imágenes */
+    }
+
+    .prev-button,
+    .next-button {
+        font-size: 30px;
+        top: 50%;
+        /* Centrar los botones verticalmente */
+        transform: translateY(-50%);
+        /* Alinear verticalmente los botones */
+    }
+
+    .prev-button {
+        left: 10px;
+    }
+
+    .next-button {
+        right: 10px;
+    }
+
+    .lines {
+        bottom: 10px;
+    }
+}
+
+/*especs*/
+/* Estilos del contenedor principal */
+.container_descripcion_espec {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilos de los botones */
+.buttons_descripcion_espec {
+    margin-bottom: 20px;
+}
+
+.buttons_descripcion_espec button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    cursor: pointer;
+    background-color: #fff;
+    color: #000;
+    border-radius: 5px;
+}
+
+/* Estilo para el botón activo */
+.buttons_descripcion_espec button.active {
+    color: red;
+}
+
+/* Estilos del div de contenido */
+.content_descripcion_espec {
+    display: none;
+    margin-top: 20px;
+}
+
+.content_descripcion_espec.active {
+    display: flex;
+    justify-content: space-around;
+}
+
+/* Estilos de los contenedores de imagen */
+.image-container_descripcion_espec {
+    width: 280px;
+    /* Tamaño fijo para todos los contenedores de imagen */
+    height: auto;
+}
+
+/* Estilos de la imagen */
+.image-container_descripcion_espec img {
+    width: 100%;
+    height: auto;
+}
+
+/* Estilos del título y la descripción */
+.content_descripcion_espec h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content_descripcion_espec p {
+    font-size: 16px;
+}
+
+.Aprilia_Máxima_deportividad4 {
+    background-image: url(imagenes/M2/nuova_SXR-50_cover_1920x640_4.jpg);
+
+    background-position: center center;
+    /* Ajusta la imagen al 100% del contenedor */
+    background-repeat: no-repeat;
+    /* Evita la repetición de la imagen */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+}
+
+.Aprilia_Máxima_deportividad5 {
+    background-image: url(imagenes/M6/editorial_cover_1920x640_ciclistica.jpg);
+
+    background-position: center center;
+    /* Ajusta la imagen al 100% del contenedor */
+    background-repeat: no-repeat;
+    /* Evita la repetición de la imagen */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+}
+
+.Aprilia_Máxima_deportividad6 {
+    background-image: url(imagenes/M6/editorial_cover_1920x640_design-1.jpg);
+
+    background-position: center center;
+    /* Ajusta la imagen al 100% del contenedor */
+    background-repeat: no-repeat;
+    /* Evita la repetición de la imagen */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+}
+
+.Aprilia_Máxima_deportividad7 {
+    background-image: url(imagenes/M6/editorial_cover_1920x640_piacere_guida_su_strada.jpg);
+
+    background-position: center center;
+    /* Ajusta la imagen al 100% del contenedor */
+    background-repeat: no-repeat;
+    /* Evita la repetición de la imagen */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+}
+
+.Aprilia_Máxima_deportividad8 {
+    background-image: url(imagenes/M7/tuono_660_cover_desktop.jpg);
+
+    background-position: center center;
+    /* Ajusta la imagen al 100% del contenedor */
+    background-repeat: no-repeat;
+    /* Evita la repetición de la imagen */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+}
+
+.Aprilia_Máxima_deportividad9 {
+    background-image: url(imagenes/M7/ApriliaTuono660-1920x640Desktop.jpg);
+
+    background-position: center center;
+    /* Ajusta la imagen al 100% del contenedor */
+    background-repeat: no-repeat;
+    /* Evita la repetición de la imagen */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+}
+
+
+/*estilo carrusel 2*/
+/*estilos de carrusel*/
+.container2 {
+    width: 100%;
+    height: auto;
+    padding: 5px;
+}
+
+.slider-container2 {
+    max-width: 100%;
+    height: auto;
+    margin: auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider-container2 img {
+    width: 100%;
+    vertical-align: middle;
+}
+
+.prev-button2,
+.next-button2 {
+    width: 40px;
+    height: 60px;
+    font-size: 80px;
+    font-weight: bold;
+    color: gray;
+    /*background-color: green;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: absolute;
+    transition: color 0.3s ease;
+}
+
+.prev-button2 {
+    left: 0px;
+}
+
+.next-button2 {
+    right: 0px;
+}
+
+.prev-button2:hover,
+.next-button2:hover {
+    color: black;
+}
+
+.lines2 {
+    position: absolute;
+    display: flex;
+    bottom: 10px;
+}
+
+.line2 {
+    padding: 5px 5px;
+    border-radius: 50px;
+    margin: 0 3px;
+    background-color: rgba(240, 240, 255, 0.7);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.line2.active {
+    background-color: red;
+    /* Cambiar el color a rojo para la diapositiva seleccionada */
+}
+
+.active2,
+.line2:hover {
+    background-color: red;
+}
+
+.slider2 {
+    display: none;
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (max-width: 700px) {
+    .slider-container2 {
+        max-width: 100%;
+        margin: 0 auto;
+        overflow: hidden;
+        /* Para evitar que las imágenes se salgan del carrusel */
+    }
+
+    .slider-container2 img {
+        width: 100%;
+        /* Hacer que las imágenes se ajusten al ancho del carrusel */
+        height: auto;
+        /* Mantener la proporción de aspecto de las imágenes */
+    }
+
+    .prev-button2,
+    .next-button2 {
+        font-size: 30px;
+        top: 50%;
+        /* Centrar los botones verticalmente */
+        transform: translateY(-50%);
+        /* Alinear verticalmente los botones */
+    }
+
+    .prev-button2 {
+        left: 10px;
+    }
+
+    .next-button2 {
+        right: 10px;
+    }
+
+    .lines2 {
+        bottom: 10px;
+    }
+}
+
+.Aprilia_Máxima_deportividad10 {
+    background-image: url(imagenes/M9/Aprilia_Tuareg_explainers_desktop.jpg);
+
+    background-position: center center;
+    /* Ajusta la imagen al 100% del contenedor */
+    background-repeat: no-repeat;
+    /* Evita la repetición de la imagen */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 500px;
+}
+
+.espacios_medelos {
+    height: 50px;
+}
+
+@media (max-width: 700px) {
+    .espacios_medelos {
+        height: 120px;
+    }
+
+    .espacio_modelos {
+        display: none;
+    }
+
+    .blanco_espacios_medelos{
+        height: 150px;
+    }
+}
+
+/*responsivo m1*/
+/* Para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+@media screen and (max-width: 768px) {
+
+    /* Cambia el ancho de los contenedores principales */
+    .contenedor1_modelo1,
+    .contenedor2_modelo1 {
+        width: 100%;
+        flex-direction: column;
+        /* Coloca los elementos en una sola columna */
+    }
+
+    /* Ajusta el ancho de las imágenes */
+    .imagen_contenedor1_modelo1,
+    .imagen_contenedor2_modelo1 {
+        height: auto;
+        /* Haz que las imágenes se ajusten automáticamente a su contenido */
+    }
+
+    /* Elimina el padding izquierdo en dispositivos móviles */
+    .info_contenedor1_modelo1,
+    .info_contenedor2_modelo1 {
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .mas_parte1 {
+        flex-direction: column;
+    }
+}
+
+/* Estilos para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+@media screen and (max-width: 768px) {
+    .banner_distribuidor {
+        height: 380px;
+        background-image: url(imagenes/hero_img_access_page_2840a-scaled.jpg);
+        background-size: center center;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .encabezado_distribuidor_uno,
+    .encabezado_distribuidor_dos {
+        text-align: center;
+        /* Centra el texto en la vista móvil */
+    }
+
+    .encabezado_distribuidor_1,
+    .encabezado_distribuidor_2 {
+        font-size: 24px;
+        /* Reduce el tamaño de fuente en la vista móvil */
+    }
+
+    .todos_los_modelos,
+    .contenedor_todos_los_modelos,
+    .conten_todos_los_modelos {
+        flex-direction: column;
+    }
+
+    .imagen_todos_los_modelos img {
+        height: 250px;
+        
+    }
+    .imagen_todos_los_modelos2 img{
+        height: 220px;
+    }
+    .cabecera_modelo_mo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        left: 0;
+    }
+    .modelo_encabezado_mo{
+        margin-top: 50px;
+    }
+}/*responsivo m1*/
+/* Para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+@media screen and (max-width: 768px) {
+
+    /* Cambia el ancho de los contenedores principales */
+    .contenedor1_modelo1,
+    .contenedor2_modelo1 {
+        width: 100%;
+        flex-direction: column;
+        /* Coloca los elementos en una sola columna */
+    }
+
+    /* Ajusta el ancho de las imágenes */
+    .imagen_contenedor1_modelo1,
+    .imagen_contenedor2_modelo1 {
+        height: auto;
+        /* Haz que las imágenes se ajusten automáticamente a su contenido */
+    }
+
+    /* Elimina el padding izquierdo en dispositivos móviles */
+    .info_contenedor1_modelo1,
+    .info_contenedor2_modelo1 {
+        padding-left: 0;
+        align-items: center;
+    }
+
+    .mas_parte1 {
+        flex-direction: column;
+    }
+}
+
+/* Estilos para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+@media screen and (max-width: 768px) {
+    .banner_distribuidor {
+        height: 380px;
+        background-image: url(imagenes/hero_img_access_page_2840a-scaled.jpg);
+        background-size: center center;
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .encabezado_distribuidor_uno,
+    .encabezado_distribuidor_dos {
+        text-align: center;
+        /* Centra el texto en la vista móvil */
+    }
+
+    .encabezado_distribuidor_1,
+    .encabezado_distribuidor_2 {
+        font-size: 24px;
+        /* Reduce el tamaño de fuente en la vista móvil */
+    }
+
+    .todos_los_modelos,
+    .contenedor_todos_los_modelos,
+    .conten_todos_los_modelos {
+        flex-direction: column;
+    }
+
+    .imagen_todos_los_modelos img {
+        height: 250px;
+        
+    }
+    .imagen_todos_los_modelos2 img{
+        height: 220px;
+    }
+    .cabecera_modelo_mo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        left: 0;
+    }
+    .modelo_encabezado_mo{
+        margin-top: 50px;
+    }
+}
+/* Estilos para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+@media screen and (max-width: 768px) {
+    .conten_colum {
+        flex-direction: column;
+        /* Coloca las columnas en una sola columna en la vista móvil */
+        align-items: center;
+        /* Centra las columnas horizontalmente */
+    }
+
+    .especificaciones_colum1 {
+        width: 100%;
+        /* Ocupa todo el ancho disponible en la vista móvil */
+        margin-bottom: 20px;
+        /* Agrega espacio entre las columnas en la vista móvil */
+    }
+
+    .column_descripcion {
+        border-bottom: none;
+        /* Elimina el borde inferior en la vista móvil */
+        padding-top: 10px;
+        /* Ajusta el espacio superior en la vista móvil */
+        padding-bottom: 10px;
+        /* Ajusta el espacio inferior en la vista móvil */
+    }
+
+    .descripcion_modelo1_parte1 img {
+        height: 300px;
+    }
+}
+
+/* Estilos para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+@media screen and (max-width: 768px) {
+    .modelo_formulario_contenedor {
+        flex-direction: column;
+        /* Coloca los elementos en una sola columna */
+        align-items: center;
+        /* Centra los elementos horizontalmente */
+
+    }
+
+
+
+    .contennn_for {
+        flex-direction: column;
+        /* Coloca los elementos en una sola columna */
+        align-items: center;
+        /* Centra los elementos horizontalmente */
+    }
+
+    .formulario_conten1,
+    .formulario_conten2 {
+        width: 100%;
+        /* Ocupa todo el ancho disponible en la vista móvil */
+    }
+
+    .formulario_data {
+        text-align: center;
+        /* Centra el formulario horizontalmente en la vista móvil */
+    }
+
+    .formulario_conten_parte2 {
+        padding-top: 10px;
+        /* Ajusta el espacio en la parte superior */
+    }
+}
+@media screen and (max-width: 768px) {
+    .modelo_encabezado {
+        background-size: cover;
+        /* Ajusta el tamaño de fondo para cubrir todo el contenedor */
+        height: auto;
+        /* Ajusta la altura automáticamente según el contenido */
+        padding: 20px;
+        /* Agrega espacio alrededor del contenido */
+        text-align: center;
+        /* Centra el contenido en pantallas más pequeñas */
+        height: 400px;
+    }
+
+    .cabecera_modelo {
+        /* Restaura la posición original */
+        left: auto;
+        top: 35px;
+        /* Restaura la posición original */
+    }
+
+    .modelo_iamagenes {
+        height: auto;
+        /* Ajusta la altura automáticamente según el contenido */
+    }
+
+    .modelo_iamagenes img {
+        max-width: 100%;
+        /* Asegura que la imagen no se desborde del contenedor */
+        height: auto;
+        /* Ajusta la altura automáticamente según el ancho */
+        position: static;
+        /* Restaura la posición original */
+        top: auto;
+        /* Restaura la posición original */
+    }
+}
+/* Estilos para pantallas más pequeñas (por ejemplo, dispositivos móviles) */
+@media screen and (max-width: 768px) {
+    .conten_postventa {
+        flex-direction: column;
+        /* Coloca los elementos en una sola columna en la vista móvil */
+        align-items: center;
+        /* Centra los elementos horizontalmente */
+    }
+
+    .post_elemento1 {
+        width: 98%;
+        /* Ajusta el ancho de las columnas en la vista móvil */
+        margin-bottom: 20px;
+        /* Agrega espacio entre las columnas en la vista móvil */
+    }
+
+    .post_elementos {
+        flex-direction: column;
+    }
+
+    .pasventa_imagen {
+        display: none;
+        /* Agrega espacio entre la imagen y las columnas en la vista móvil */
+    }
+    .imagenes_de_motos img{
+        height: 250px;
+    }
+    #image_motos{
+        height: 200px;
+    }
+    .Aprilia_modelos{
+        height: 800px;
+    }
+    .Aprilia_modelos1{
+        display: none;
+    }
+    .content_descripcion_espec{
+        flex-direction: column;
+    }
+    .interno3_descripcion_modelo1_parte1{
+        display: none;
+    }
+    .elementor-text-editor {
+        width: 100%;
+    }
+}
+.Aprilia_modelos_mobil{
+    display: none;
+}
+#data_tres{
+    width: 55%; text-align: initial;
+}
